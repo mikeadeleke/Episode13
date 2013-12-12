@@ -9,6 +9,13 @@ describe Teacher do
     subject.assignment_for_student(student).should eq(assignment)
   end
 
+  it "should view average grade for the class" do
+    class_total = ClassTotal.new
+    class_grade = ClassGrade.new
+    average_grade = @class_grade / @class_total
+  end
+
+
 
   describe "should record a grade" do
     it "should record the grade" do

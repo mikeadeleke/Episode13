@@ -1,6 +1,8 @@
 class Teacher
   def initialize
     @assignments = {}
+    @class_total = class_total
+    @class_grade = class_grade
   end
 
   def record_grade(student, grade)
@@ -15,5 +17,10 @@ class Teacher
 
   def assignment_for_student(student)
     @assignments[student]
+  end
+
+  def class
+    @class_total = @student * 20
+    @class_grade = @student.grade * 20
   end
 end
