@@ -23,4 +23,9 @@ class Teacher
     @class_total = @student * 20
     @class_grade = @student.grade * 20
   end
+
+  def average_grade
+    average_grade = AverageGrade.new
+    average_grade.average(class_grade / class_total)
+  end
 end
