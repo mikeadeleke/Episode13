@@ -1,22 +1,16 @@
-Given /^I have a class$/ do
-  @student = Student.new
-  @teacher = Teacher.new
-  @class = Class.new
+Given /^I add all the grades in one class$/ do
+  class_grade = record_grade(student, grade)(n+1) #Not sure how to write a block that keeps adding a students until you run out of students
 end
 
-Given /^their assignments are graded$/ do
-  @teacher.submit_assignment(@student, Assignment.new)
-  @teacher.record_grade(@student, 95)
-  @teacher.assignment_for_student(@student).grade.should eq(95)
+Given /^the total number of students is added together$/ do
+  class_total = studets(1..n) #unsure how to add all the students together 
 end
 
-When /^I take the average of the grades$/ do
-  @class_total = class_total
-  @class_grade = class_total
+When /^there is a cummulative class grade and a total number of students$/ do
+	class_grade = class_grade
+	class_total = class_total
 end
 
-Then /^the class has an average grade$/ do
-  @class_total = class_total
-  @class_grade = class_grade
-  average_grade = @class_grade / @class_total
+Then /^the I can get the class average by dividing the class grade by number of students$/ do
+	class_average = class_grade / class_total
 end
