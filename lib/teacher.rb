@@ -1,8 +1,6 @@
 class Teacher
   def initialize
     @assignments = {}
-    @class_total = class_total
-    @class_grade = class_grade
   end
 
   def record_grade(student, grade)
@@ -23,9 +21,14 @@ class Teacher
     @class_total = @student * 20
     @class_grade = @student.grade * 20
   end
+end
 
-  def average_grade
-    average_grade = AverageGrade.new
-    average_grade.average(class_grade / class_total)
+class AverageGrade
+  def intialize 
+    @average_grade = average_grade
+  end
+
+  def average
+    (class_grade / class_total)
   end
 end
