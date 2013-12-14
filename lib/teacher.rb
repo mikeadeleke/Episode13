@@ -17,18 +17,22 @@ class Teacher
     @assignments[student]
   end
 
-  def class
-    @class_total = @student * 20
-    @class_grade = @student.grade * 20
-  end
 end
 
 class AverageGrade
-  def intialize 
+  def initialize 
     @average_grade = average_grade
+    @class_total = class_total
+    @class_grade = class_grade
   end
 
   def average
     (class_grade / class_total)
   end
+
+  def class
+    @class_total = @student * 20
+    @class_grade = @student.grade * 20
+  end
+
 end
