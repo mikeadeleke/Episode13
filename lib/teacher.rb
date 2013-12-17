@@ -20,7 +20,7 @@ class Teacher
 end
 
 class AverageGrade
-  def initialize 
+  def initialize(average_grade, class_total, class_grade)
     @average_grade = average_grade
     @class_total = class_total
     @class_grade = class_grade

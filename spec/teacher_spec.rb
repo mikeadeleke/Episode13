@@ -22,6 +22,6 @@ end
 
 describe AverageGrade do
   it "should view average grade for the class" do
-    average_grade.average.should eq(class_grade/class_total)
+    AverageGrade.new.average.should eq(class_grade/class_total)
   end
 end
